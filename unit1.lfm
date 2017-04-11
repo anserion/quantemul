@@ -1,0 +1,178 @@
+object Form1: TForm1
+  Left = 234
+  Height = 608
+  Top = 8
+  Width = 846
+  BorderStyle = bsDialog
+  Caption = 'Эмуляция квантовых вычислений (автор Ионисян А.С.)'
+  ClientHeight = 608
+  ClientWidth = 846
+  OnCreate = FormCreate
+  LCLVersion = '1.6.2.0'
+  object CB_gates: TComboBox
+    Left = 416
+    Height = 28
+    Top = 0
+    Width = 68
+    ItemHeight = 20
+    OnChange = CB_gatesChange
+    OnExit = CB_gatesChange
+    Style = csDropDownList
+    TabOrder = 9
+    Visible = False
+  end
+  object SG_cur_state: TStringGrid
+    Left = 8
+    Height = 384
+    Top = 32
+    Width = 408
+    ColCount = 6
+    RowCount = 257
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 20
+    Top = 0
+    Width = 303
+    Caption = 'Наиболее вероятное квантовое состояние:'
+    ParentColor = False
+  end
+  object EDIT_step: TEdit
+    Left = 640
+    Height = 28
+    Top = 0
+    Width = 56
+    ReadOnly = True
+    TabOrder = 1
+    Text = '0'
+  end
+  object EDIT_observe: TEdit
+    Left = 280
+    Height = 28
+    Top = 0
+    Width = 80
+    ReadOnly = True
+    TabOrder = 2
+    Text = '0'
+  end
+  object BTN_exit: TButton
+    Left = 720
+    Height = 25
+    Top = 576
+    Width = 75
+    Caption = 'Выход'
+    OnClick = BTN_exitClick
+    TabOrder = 3
+  end
+  object BTN_save: TButton
+    Left = 757
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'Сохранить'
+    OnClick = BTN_saveClick
+    TabOrder = 4
+  end
+  object BTN_load: TButton
+    Left = 672
+    Height = 25
+    Top = 544
+    Width = 75
+    Caption = 'Загрузить'
+    OnClick = BTN_loadClick
+    TabOrder = 5
+  end
+  object BTN_start: TButton
+    Left = 672
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'пуск'
+    OnClick = BTN_startClick
+    TabOrder = 6
+  end
+  object Label5: TLabel
+    Left = 8
+    Height = 20
+    Top = 424
+    Width = 147
+    Caption = 'Квантовый алгоритм'
+    ParentColor = False
+  end
+  object SG_all_states: TStringGrid
+    Left = 424
+    Height = 408
+    Top = 32
+    Width = 408
+    ColCount = 65
+    RowCount = 257
+    TabOrder = 7
+    OnSelectCell = SG_all_statesSelectCell
+  end
+  object SG_alg: TStringGrid
+    Left = 8
+    Height = 153
+    Top = 448
+    Width = 656
+    ColCount = 65
+    RowCount = 9
+    TabOrder = 8
+    OnSelectCell = SG_algSelectCell
+  end
+  object BTN_reset: TButton
+    Left = 757
+    Height = 25
+    Top = 512
+    Width = 75
+    Caption = 'Сброс'
+    OnClick = BTN_resetClick
+    TabOrder = 10
+  end
+  object Label4: TLabel
+    Left = 424
+    Height = 20
+    Top = 0
+    Width = 246
+    Caption = 'Выбран шаг квантового алгоритма'
+    ParentColor = False
+  end
+  object EDIT_qgates_num: TEdit
+    Left = 752
+    Height = 28
+    Top = 480
+    Width = 80
+    TabOrder = 11
+    Text = '64'
+  end
+  object EDIT_qbits_num: TEdit
+    Left = 752
+    Height = 28
+    Top = 448
+    Width = 80
+    TabOrder = 12
+    Text = '4'
+  end
+  object Label2: TLabel
+    Left = 672
+    Height = 20
+    Top = 448
+    Width = 57
+    Caption = 'Кубитов'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 672
+    Height = 20
+    Top = 480
+    Width = 77
+    Caption = 'Алг. шагов:'
+    ParentColor = False
+  end
+  object SaveDialog1: TSaveDialog
+    left = 368
+  end
+  object OpenDialog1: TOpenDialog
+    left = 392
+  end
+end
